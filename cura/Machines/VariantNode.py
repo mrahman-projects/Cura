@@ -127,7 +127,7 @@ class VariantNode(ContainerNode):
         material_definition = container.getMetaDataEntry("definition")
 
         base_file = container.getMetaDataEntry("base_file")
-        if base_file in self.machine.exclude_materials:
+        if self.machine.isExcludedMaterial(base_file):
             return  # Material is forbidden for this printer.
         if base_file not in self.materials:  # Completely new base file. Always better than not having a file as long as it matches our set-up.
             if material_definition != "fdmprinter" and material_definition != self.machine.container_id:

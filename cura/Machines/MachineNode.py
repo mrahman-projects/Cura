@@ -1,6 +1,7 @@
 # Copyright (c) 2019 Ultimaker B.V.
 # Cura is released under the terms of the LGPLv3 or higher.
 
+import re
 from typing import Dict, List
 
 from UM.Logger import Logger
@@ -43,7 +44,7 @@ class MachineNode(ContainerNode):
         self.has_variants = parseBool(my_metadata.get("has_variants", "false"))
         self.has_machine_quality = parseBool(my_metadata.get("has_machine_quality", "false"))
         self.quality_definition = my_metadata.get("quality_definition", container_id) if self.has_machine_quality else "fdmprinter"
-        self.exclude_materials = my_metadata.get("exclude_materials", [])
+        self.exclude_materials: list[re.Pattern] = [re.compile(pattern) for pattern in my_metadata.get("exclude_materials", [])]
         self.preferred_variant_name = my_metadata.get("preferred_variant_name", "")
         self.preferred_material = my_metadata.get("preferred_material", "")
         self.preferred_quality_type = my_metadata.get("preferred_quality_type", "")
@@ -170,10 +171,7 @@ class MachineNode(ContainerNode):
 
     def isExcludedMaterial(self, material: MaterialNode) -> bool:
         """Returns whether the material should be excluded from the list of materials."""
-        for exclude_material in self.exclude_materials:
-            if exclude_material in material["id"]:
-                return True
-        return False
+        return any(pattern.fullmatch(material["id"]) for pattern in self.exclude_materials)
 
     @UM.FlameProfiler.profile
     def _loadAll(self) -> None:
