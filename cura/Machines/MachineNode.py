@@ -169,9 +169,9 @@ class MachineNode(ContainerNode):
 
         return self.global_qualities.get(self.preferred_quality_type, next(iter(self.global_qualities.values())))
 
-    def isExcludedMaterial(self, material: MaterialNode) -> bool:
+    def isExcludedMaterial(self, material_id: str) -> bool:
         """Returns whether the material should be excluded from the list of materials."""
-        return any(pattern.fullmatch(material["id"]) for pattern in self.exclude_materials)
+        return any(pattern.fullmatch(material_id) for pattern in self.exclude_materials)
 
     @UM.FlameProfiler.profile
     def _loadAll(self) -> None:
