@@ -9,10 +9,10 @@
         "manufacturer": "Artillery",
         "file_formats": "text/x-gcode",
         "exclude_materials": [
-            "dsm_arnitel2045_175",
-            "dsm_novamid1070_175",
-            "innofill_innoflex60_175",
-            "verbatim_bvoh_175"
+            ".*dsm_arnitel2045_175.*",
+            ".*dsm_novamid1070_175.*",
+            ".*innofill_innoflex60_175.*",
+            ".*verbatim_bvoh_175.*"
         ],
         "first_start_actions": [ "MachineSettingsAction" ],
         "has_machine_quality": true,

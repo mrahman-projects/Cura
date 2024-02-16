@@ -9,10 +9,10 @@
         "manufacturer": "Mingda",
         "file_formats": "text/x-gcode",
         "exclude_materials": [
-            "dsm_arnitel2045",
-            "dsm_novamid1070",
-            "innofill_innoflex60",
-            "verbatim_bvoh"
+            ".*dsm_arnitel2045.*",
+            ".*dsm_novamid1070.*",
+            ".*innofill_innoflex60.*",
+            ".*verbatim_bvoh.*"
         ],
         "first_start_actions": [ "MachineSettingsAction" ],
         "has_machine_quality": true,

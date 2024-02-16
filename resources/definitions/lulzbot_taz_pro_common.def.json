@@ -7,7 +7,7 @@
         "visible": false,
         "author": "Tom Callaway <spot@fedoraproject.org>",
         "manufacturer": "Fargo Additive Manufacturing Equipment 3D, LLC",
-        "exclude_materials": [ "structur3d_dap100silicone" ],
+        "exclude_materials": [ ".*structur3d_dap100silicone.*" ],
         "preferred_material": "generic_pla"
     },
     "overrides":

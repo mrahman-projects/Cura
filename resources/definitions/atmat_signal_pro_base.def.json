@@ -9,13 +9,13 @@
         "manufacturer": "ATMAT sp. z o.o.",
         "file_formats": "text/x-gcode",
         "exclude_materials": [
-            "dsm_arnitel2045",
-            "dsm_novamid1070",
-            "generic_cpe",
-            "imade3d_petg",
-            "imade3d_pla",
-            "innofill_innoflex60",
-            "verbatim_bvoh"
+            ".*dsm_arnitel2045.*",
+            ".*dsm_novamid1070.*",
+            ".*generic_cpe.*",
+            ".*imade3d_petg.*",
+            ".*imade3d_pla.*",
+            ".*innofill_innoflex60.*",
+            ".*verbatim_bvoh.*"
         ],
         "has_machine_quality": true,
         "has_materials": true,

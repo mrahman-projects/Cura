@@ -10,13 +10,13 @@
         "file_formats": "text/x-gcode",
         "platform": "weedo_x40.3mf",
         "exclude_materials": [
-            "generic_pc",
-            "generic_nylon",
-            "dsm_arnitel2045",
-            "dsm_novamid1070",
-            "imade3d_petg",
-            "imade3d_pla",
-            "innofill_innoflex60"
+            ".*generic_pc.*",
+            ".*generic_nylon.*",
+            ".*dsm_arnitel2045.*",
+            ".*dsm_novamid1070.*",
+            ".*imade3d_petg.*",
+            ".*imade3d_pla.*",
+            ".*innofill_innoflex60.*"
         ],
         "has_machine_quality": true,
         "has_materials": true,

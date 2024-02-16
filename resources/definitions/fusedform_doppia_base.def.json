@@ -7,7 +7,7 @@
         "visible": false,
         "author": "Juan Blanco",
         "manufacturer": "Fused Form",
-        "exclude_materials": [ "structur3d_dap100silicone" ],
+        "exclude_materials": [ ".*structur3d_dap100silicone.*" ],
         "has_machine_quality": true,
         "has_materials": true,
         "machine_extruder_trains":

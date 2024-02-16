@@ -9,11 +9,11 @@
         "manufacturer": "Zav Co., Ltd.",
         "file_formats": "text/x-gcode",
         "exclude_materials": [
-            "dsm_arnitel2045",
-            "dsm_novamid1070",
-            "imade3d_petg",
-            "imade3d_pla",
-            "innofill_innoflex60"
+            ".*dsm_arnitel2045.*",
+            ".*dsm_novamid1070.*",
+            ".*imade3d_petg.*",
+            ".*imade3d_pla.*",
+            ".*innofill_innoflex60.*"
         ],
         "first_start_actions": [ "MachineSettingsAction" ],
         "has_machine_quality": true,
